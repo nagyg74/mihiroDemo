@@ -29,10 +29,10 @@ function getArrayDiameter(arr) {
     var min = undefined;
     var max = undefined;
     for (var i = 0; i < arrLength; i++) {
-        if(arr[i]<min || !min){
+        if(arr[i]<min || min == undefined){
             min = arr[i];
         }
-        if(arr[i]>max || !max){
+        if(arr[i]>max || max == undefined){
             max = arr[i];
         }
     }
@@ -46,8 +46,8 @@ console.log(diameter);
  * Complexity estimation based on worst case
  * 
  * 4+2n for initialization and loop
- * n(2*3) for min/max selection
+ * n(2*4) for min/max selection
  * 1 for return
  * 
- * that makes O(6n+5) over all
+ * that makes O(8n+5) over all
  */
