@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mihiro coding Task2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="js/lib/angular.min.js" type="text/javascript"></script>
+        <script src="js/demodata.js" type="text/javascript"></script>
+        <script src="js/task2.js" type="text/javascript"></script>
+        <script src="js/services.js" type="text/javascript"></script>
+        <script src="js/controllers.js" type="text/javascript"></script>
+        <style>
+            #companyList{
+                position: relative;
+                max-width: 400px;
+            }
+            #spinner{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                min-height: 200px;
+                background-color: lightgray;
+                top: 0;
+                left: 0;
+                text-align: center;
+            }
+            .icon{
+                position: relative;
+                color: #525252;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+    <body ng-app="mihiroDemo">
+        <div ng-controller="companiesCtrl">
+            <h1>{{title}}</h1>
+            <div id="companyList">
+                <div ng-repeat="company in companies">
+                    <div class="compId">
+                        {{company.id}}    
+                    </div>
+                    <div class="compName">
+
+                        Name: <strong>{{ company.name}}</strong>
+                    </div>
+                    <div class="compAddr">
+                        Address: <strong>{{company.address}}</strong>
+                    </div>
+                </div>
+                <div id="companyControls">
+                    <button ng-click="gotoPrevious()">Previous</button>
+                    <button ng-click="gotoNext()">Next</button>
+                    <select ng-model="pagesize" ng-change="changePageSize()">
+                        <option value="10" ng-selected="pagesize == 10">10</option>
+                        <option value="20" ng-selected="pagesize == 20">20</option>
+                        <option value="30" ng-selected="pagesize == 30">30</option>
+                    </select>
+                </div>
+                <div id="spinner" ng-hide="state">
+                    <div class="icon">
+                        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4>From: {{listFrom + 1}} - To: {{listTo}} - Page size: {{pagesize}}</h4>
+            <h4>Total number of companies: {{companyCount}}</h4>
+            <h4>State: {{state}}</h4>
+        </div>
+    </body>
+</html>
