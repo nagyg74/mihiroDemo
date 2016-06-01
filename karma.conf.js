@@ -1,25 +1,52 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Karma configuration
+// Generated on Wed Jun 01 2016 23:26:24 GMT+0200 (Közép-európai nyári idő )
 
 module.exports = function (config) {
     config.set({
-        basePath: '../',
+        // base path that will be used to resolve all patterns (eg. files, exclude)
+        basePath: '',
+        // frameworks to use
+        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ['jasmine'],
+        // list of files / patterns to load in the browser
         files: [
-            'js/*.js',
-            'js/lib/*.js',
-            'Unit Tests/*.js'
+            'public_html/js/lib/**.js',
+            'public_html/js/task1.js',
+            'public_html/js/task2.js',
+            'public_html/js/demodata.js',
+            'public_html/js/services.js',
+            'public_html/js/controllers.js',
+//            'public_html/js/**.js',
+            'test/**.js'
         ],
+        // list of files to exclude
         exclude: [
         ],
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+        preprocessors: {
+        },
+        // test results reporter to use
+        // possible values: 'dots', 'progress'
+        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ['progress'],
+        // web server port
+        port: 9876,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
+        // enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,
-        frameworks: ['jasmine'],
-        browsers: [
-            'chrome'
-        ],
-        plugins: [
-        ]
+        // start these browsers
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: ['Chrome'],
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
+        singleRun: false,
+        // Concurrency level
+        // how many browser should be started simultaneous
+        concurrency: Infinity
     });
 };
