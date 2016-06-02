@@ -1,0 +1,64 @@
+body {
+  color: #525252;
+}
+.head-wrapper {
+  background-color: #6f5499;
+  padding: 30px 0;
+  color: white;
+}
+.content-wrapper {
+  padding: 15px 0;
+}
+.footer-wrapper {
+  background-color: #6f5499;
+  padding: 30px 0;
+}
+#companyList {
+  position: relative;
+  min-height: 100px;
+}
+.companyItem {
+  margin: 3px 0;
+  padding: 8px;
+}
+.compId {
+  background-color: lightgray;
+  height: 70px;
+  text-align: center;
+}
+.compId .idnumber {
+  font-size: 20px;
+  font-weight: bold;
+  color: #525252;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.compName {
+  font-weight: bold;
+}
+.compDetails {
+  font-size: 12px;
+  padding: 5px;
+  background-color: lime;
+  min-height: 50px;
+}
+.compDetails a {
+  color: #525252;
+}
+#spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.8);
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.icon {
+  position: relative;
+  color: #525252;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*# sourceMappingURL=mihiro.css.map */
