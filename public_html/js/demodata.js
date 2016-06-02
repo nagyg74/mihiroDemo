@@ -1,3 +1,4 @@
+var serviceLatency = 500;
 var demoData = [
     {
         "name": "Dignissim Pharetra Nam Foundation",
@@ -700,5 +701,3 @@ var demoData = [
         "id": 100
     }
 ];
-
-var serviceThrottle = 500;

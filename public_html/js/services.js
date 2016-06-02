@@ -14,7 +14,7 @@ angular.module('mihiroDemo')
                 return $q(function (resolve, reject) {
                     setTimeout(function () {
                             resolve(companies.slice(from, to));
-                    }, serviceThrottle);
+                    }, serviceLatency);
                 });
             }
 
