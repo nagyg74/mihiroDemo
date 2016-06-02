@@ -21,6 +21,8 @@ n(2*4) for min&max selection,
 ### 2. Request demo
 Write a web app, which demonstrates a simple interaction between client and server:
 
+You can find result in `index.html`.
+
 _For example of server client connection with REST Api, check out [my other repo](https://github.com/nagyg74/bbDemo.git). It uses Angular and Jasmine_
 
 1. Client should be able to request list data from the server
