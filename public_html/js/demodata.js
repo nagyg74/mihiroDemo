@@ -427,7 +427,7 @@ var demoData = [
         "id": 61
     },
     {
-        "name": "Vulputate Ullamcorper Magna Industries",
+        "name": "Vulputate Magna Industries",
         "address": "969-4017 Consequat St.",
         "phone": "(0026) 16492631",
         "email": "vitae@enimnisl.ca",
@@ -644,7 +644,7 @@ var demoData = [
         "id": 92
     },
     {
-        "name": "Felis Ullamcorper Viverra Ltd",
+        "name": "Felis Viverra Ltd",
         "address": "728-8015 Placerat. Ave",
         "phone": "(09518) 6193384",
         "email": "Lorem@consequatauctornunc.co.uk",
@@ -701,4 +701,4 @@ var demoData = [
     }
 ];
 
-var serviceThrottle = 2000;
+var serviceThrottle = 500;

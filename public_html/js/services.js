@@ -5,7 +5,7 @@ angular.module('mihiroDemo')
 
             function getCompanies(from, to) {
 
-                from = from || 0;
+                from = from-1 || 0;
                 to = to || companies.length;
                 if (to > companies.length) {
                     to = companies.length;
