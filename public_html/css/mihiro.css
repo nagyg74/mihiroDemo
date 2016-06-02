@@ -8,6 +8,8 @@ body {
 }
 .content-wrapper {
   padding: 15px 0;
+  position: relative;
+  min-height: 130px;
 }
 .footer-wrapper {
   background-color: #6f5499;
