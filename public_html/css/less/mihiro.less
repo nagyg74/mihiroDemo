@@ -1,6 +1,6 @@
 @accent-color: #6f5499;
 @secondary-color: lightgray;
-@data-color: lime;
+@data-color: #3aaf29;;
 @text-color: #525252;
 
 body {
@@ -59,12 +59,13 @@ body {
     font-weight: bold;
 }
 .compDetails{
+    color: lighten(@data-color,50%);
     font-size: 12px;
     padding: 5px;
     background-color: @data-color;
     min-height: 50px;
     a {
-        color: @text-color;
+        color: lighten(@data-color,50%);
     }
 }
 #spinner{

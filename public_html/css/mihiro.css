@@ -54,13 +54,14 @@ body {
   font-weight: bold;
 }
 .compDetails {
+  color: #e2f8df;
   font-size: 12px;
   padding: 5px;
-  background-color: lime;
+  background-color: #3aaf29;
   min-height: 50px;
 }
 .compDetails a {
-  color: #525252;
+  color: #e2f8df;
 }
 #spinner {
   position: absolute;
