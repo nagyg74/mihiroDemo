@@ -45,13 +45,13 @@ and open the template in the editor.
                                 {{ company.name}}
                             </span><br>
                             <span class="compAddr">
-                               <i class="fa fa-home" aria-hidden="true"></i> {{company.address}}
+                                <i class="fa fa-home" aria-hidden="true"></i> {{company.address}}
                             </span><br>
                             <span class="compPhone">
-                               <i class="fa fa-phone" aria-hidden="true"></i> {{company.phone}}
+                                <i class="fa fa-phone" aria-hidden="true"></i> {{company.phone}}
                             </span><br>
                             <span class="compEmail">
-                               <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{company.email}}">{{company.email}}</a>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{company.email}}">{{company.email}}</a>
                             </span>
                         </div>
                     </div>
@@ -67,19 +67,22 @@ and open the template in the editor.
         <div class="footer-wrapper">
             <div class="container">
                 <div class="row" id="companyControls">
-                    <button class="btn" ng-click="gotoPrevious()">Previous</button>
-                    <button class="btn" ng-click="gotoNext()">Next</button>
-                    <select ng-model="pageSize" ng-change="changePageSize()">
-                        <option value="4" ng-selected="pageSize == 4">4</option>
-                        <option value="12" ng-selected="pageSize == 12">12</option>
-                        <option value="24" ng-selected="pageSize == 24">24</option>
-                        <option value="36" ng-selected="pageSize == 36">36</option>
-                    </select>
+                    <div class="col-xs-12 col-sm-3">
+                        <button class="btn" ng-disabled="isFirstPage" ng-click="gotoPrevious()">Previous</button>
+                        <button class="btn" ng-disabled="isLastPage" ng-click="gotoNext()">Next</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 pageCount">
+                        <h4>{{activePage}} of {{pageCount}} pages || From {{listFrom}} to {{listTo}} of {{companyCount}} companies</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 pageSize">
+                        <select class="form-control" ng-model="pageSize" ng-init="pageSize='12'" ng-change="changePageSize()">
+                                <option value="4" ng-selected="pageSize == 4">4</option>
+                                <option value="12" ng-selected="pageSize == 12">12</option>
+                                <option value="24" ng-selected="pageSize == 24">24</option>
+                                <option value="36" ng-selected="pageSize == 36">36</option>
+                            </select>
+                    </div>
                 </div>
-                <h4>From: {{listFrom}} - To: {{listTo}} - Page size: {{pageSize}}</h4>
-                <h4>Total number of companies: {{companyCount}}</h4>
-                <h4>Pages: {{activePage}} of {{pageCount}}</h4>
-                <h4>State: {{state}}</h4>
             </div>
         </div>
     </body>
