@@ -13,6 +13,22 @@ body {
   background-color: #6f5499;
   padding: 30px 0;
 }
+.footer-wrapper h4 {
+  color: white;
+}
+.footer-wrapper .btn {
+  min-width: 90px;
+}
+.footer-wrapper .pageCount {
+  text-align: center;
+}
+.footer-wrapper .pageSize {
+  text-align: right;
+}
+.footer-wrapper .pageSize select {
+  max-width: 80px;
+  display: inline-block;
+}
 #companyList {
   position: relative;
   min-height: 100px;
@@ -61,4 +77,3 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-/*# sourceMappingURL=mihiro.css.map */
